@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Tic Tac Toe !!!</h1>
+    </header>
+    <main>
+      <p id="turnText"></p>
+      <section id="Board">
+        <div class="box" id="1"></div>
+        <div class="box" id="2"></div>
+        <div class="box" id="3"></div>
+        <div class="box" id="4"></div>
+        <div class="box" id="5"></div>
+        <div class="box" id="6"></div>
+        <div class="box" id="7"></div>
+        <div class="box" id="8"></div>
+        <div class="box" id="9"></div>
+      </section>
+      <p id="winText"></p>
+      <section id="Level">
+        <p>
+          <input type="radio" name="level" id="easy" value="easy" />
+          <label for="easy">Easy</label>
+        </p>
+        <p>
+          <input type="radio" name="level" id="hard" value="hard" />
+          <label for="hard">Hard</label>
+        </p>
+      </section>
+      <section id="button-section">
+        <button id="start">Start Game</button>
+        <button id="reset">Reset Game</button>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin: 1rem 0;
+}
+
+#Board{
+    margin: 1rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+    height: 300px;
+}
+
+.box{
+    border: 1px black solid;
+    width: 100px;
+    height: 100px;
+    font-size: 4rem;
+    display: grid;
+    place-content: center;
+}
+
+.box:nth-child(3n+1){
+    border-left: 0px;
+}
+
+.box:nth-child(3n+3){
+    border-right: 0px;
+}
+
+.box:nth-child(-n+3){
+    border-top: 0px;
+}
+.box:nth-child(-n+9){
+    border-bottom: 0px;
+}
+
+button{
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+    #Board{
+        width: 450px;
+        height: 450px;
+    }
+    .box{
+        width: 150px;
+        height: 150px;
+    }
+    
+}
+
+#winText, #turnText{
+    font-weight: bold;
+    font-size: min(1.25rem,150%);
+    margin: 1em 0;
+}
+
+#Level{
+    margin-bottom: 0.25em;
+}
+#Level p{
+    font-weight: bold;
+    font-size: 1.25em;
+    display: inline-block;
+    margin-right: 0.25rem;
+}
