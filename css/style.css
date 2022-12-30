@@ -64,6 +64,9 @@ button{
     }
     
 }
+.nowrap{
+    white-space: nowrap;
+}
 
 #winText, #turnText{
     font-weight: bold;

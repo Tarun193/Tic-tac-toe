@@ -61,6 +61,8 @@ for (let i = 0; i < boxes.length; i++) {
   boxes[i].addEventListener("click", function (e) {
     if (start) {
       humanMove(this);
+    } else {
+      alert("please Select the level And Press Start game to start the game");
     }
   });
 }
@@ -244,8 +246,21 @@ function smartComputer() {
 function computerPlay() {
   if (level === "easy") {
     dumbComputerMove();
+  } else if (level === "medium") {
+    HybridComputer();
   } else {
     smartComputer();
+  }
+}
+
+function HybridComputer() {
+  let turn = Math.random() < 0.5;
+  if (turn) {
+    smartComputer();
+    turn = !turn;
+  } else {
+    dumbComputerMove();
+    turn = !turn;
   }
 }
 
